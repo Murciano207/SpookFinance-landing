@@ -1,0 +1,39 @@
+import React from 'react';
+import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim, HeroLogo } from './styled';
+
+import { useTranslation } from 'react-i18next';
+
+import { PrimaryButton, TextButton } from 'components/Button/Button';
+import IconButton from 'components/IconButton/IconButton';
+
+import YogiLogo from 'images/logo.svg';
+
+const Hero = () => {
+  const { t } = useTranslation();
+  
+  return (
+    <BaseHero>
+      <HeroContent>
+        <HeroTitle>{t('Hero-Title')}</HeroTitle>
+        <HeroDescription>{t('Hero-Description')}</HeroDescription>
+        <HeroActions>
+          <HeroActionGroup>
+            <PrimaryButton href='https://exchange.yogi.fi'>{t('Hero-Cta')}</PrimaryButton>
+            <TextButton href='https://docs.yogi.fi'>{t('Hero-LearnMore')}</TextButton>
+          </HeroActionGroup>
+          <HeroActionGroup>
+            <IconButton href='https://discord.yogi.fi' icon={['fab', 'discord']} />
+            <IconButton href='https://github.yogi.fi' icon={['fab', 'github']} />
+            <IconButton href='https://twitter.com/yogi_finance' icon={['fab', 'twitter']} />
+            <IconButton href='https://medium.com/yogi_finance' icon={['fab', 'medium']} />
+          </HeroActionGroup>
+        </HeroActions>
+      </HeroContent>
+      <HeroAnim>
+        <HeroLogo src={YogiLogo} alt="Yogi Logo" />
+      </HeroAnim>
+    </BaseHero>
+  )
+};
+
+export default Hero;
