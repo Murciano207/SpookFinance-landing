@@ -23,7 +23,7 @@ const Hero = () => {
           </HeroActionGroup>
           <HeroActionGroup>
             <IconButton href='https://discord.gg/W6wUZ4tgNC' icon={['fab', 'discord']} />
-            <IconButton href='https://github.yogi.fi' icon={['fab', 'github']} />
+            <IconButton href='https://github.com/yogi-fi' icon={['fab', 'github']} />
             <IconButton href='https://twitter.com/yogi_finance' icon={['fab', 'twitter']} />
             <IconButton href='https://medium.com/yogi-fi' icon={['fab', 'medium']} />
           </HeroActionGroup>
