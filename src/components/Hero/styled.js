@@ -21,6 +21,10 @@ const BaseHero = styled.section`
   ${MediaQuery.lg} {
     padding: unset;
   }
+
+  ${MediaQuery.xl} {
+    margin: 25vh auto 6rem;
+  }
 `;
 
 const HeroContent = styled.div`
