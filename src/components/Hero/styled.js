@@ -6,15 +6,15 @@ const BaseHero = styled.section`
   justify-content: center;
   max-width: 1000px;
   padding: .5rem 1rem;
-  margin: 4rem auto 4rem;
+  margin: 4rem auto;
 
   ${MediaQuery.sm} {
     padding: .5rem 2rem;
-    margin: 6rem auto 4rem;
+    margin: 6rem auto;
   }
 
   ${MediaQuery.md} {
-    margin: 7rem auto 4rem;
+    margin: 7rem auto;
     justify-content: space-between;
   }
 
@@ -35,6 +35,7 @@ const HeroContent = styled.div`
 
   ${MediaQuery.sm} {
     align-content: center;
+    justify-content: center;
     text-align: center;
     max-width: 32rem;
   }
@@ -117,7 +118,7 @@ const HeroAnim = styled.div`
 
 const HeroLogo = styled.img`
   width: 20rem;
-  margin-top: -.5rem;
+  margin-top: -1rem;
   filter: drop-shadow(0 8px 1px rgba(6, 45, 56, .7));
 `;
 
