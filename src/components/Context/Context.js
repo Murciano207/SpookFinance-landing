@@ -7,6 +7,10 @@ const SUBGRAPH_URL = "https://api.thegraph.com/subgraphs/name/yogi-fi/yogi-subgr
 
 export const YogiContext = createContext(null);
 
+const formatCurrency = (n) => {
+  return `$${commarize(n)}`;
+}
+
 const Context = ({ children }) => {
   const [price, setPrice] = useState("TBA");
   const [liquidity, setLiquidity] = useState("0");
@@ -43,9 +47,9 @@ const Context = ({ children }) => {
 
     // TODO: get Yogi price
     setPrice("TBA");
-    setLiquidity(commarize(reduced.liquidity));
-    setVolume(commarize(reduced.volume));
-    setFees(commarize(reduced.fees));
+    setLiquidity(formatCurrency(reduced.liquidity));
+    setVolume(formatCurrency(reduced.volume));
+    setFees(formatCurrency(reduced.fees));
     setSwaps(reduced.swaps);
     setPools(data.pools.length);
   }
