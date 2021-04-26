@@ -1,10 +1,10 @@
 {
     "Nav-Docs": "文件",
-    "Nav-Exchange": "交流",
-    "Hero-Title": "BSC上可编程的流动资金",
-    "Hero-Description": "自动投资组合管理器、流动性提供者和价格传感器。针对Binance智能链进行了优化。",
-    "Hero-Cta": "交流",
-    "Hero-LearnMore": "了解更多",
+    "Nav-Exchange": "交换",
+    "Hero-Title": "BSC的可编程流动性",
+    "Hero-Description": "自动化的投资组合经理，流动性提供者和价格传感器。针对Binance Smart Chain进行了优化。",
+    "Hero-Cta": "交换",
+    "Hero-LearnMore": "学到更多",
     "Footer-Liquidity": "流动性",
-    "Footer-Volume": "卷宗"
+    "Footer-Volume": "体积"
 }

@@ -2,12 +2,12 @@ import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-const locales = ["bg", "cs", "da", "de", "el", "en", "es", "fi", "fr", "he", "hi", "hr", "hu", "id", "it", "ja", "ko", "lt", "nl", "pl", "pt", "ro", "ru", "sk", "sr", "sv", "th", "tr", "uk", "vi", "zh"];
+const locales = ["de", "en", "es", "fr", "hi", "id", "it", "ja", "ko", "pt", "ru", "th", "tr", "vi", "zh"];
 
 const resources = {};
 for (let i = 0; i< locales.length; i++ ){
   const locale = locales[i];
-  resources[locale] = require(`locales/${locale}`); 
+  resources[locale] = { translation: require(`locales/${locale}`)}; 
 }
 
 i18n

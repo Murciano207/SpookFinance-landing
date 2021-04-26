@@ -1,10 +1,10 @@
 {
     "Nav-Docs": "ドキュメント",
-    "Nav-Exchange": "交換",
-    "Hero-Title": "BSCでのプログラム可能な流動性",
-    "Hero-Description": "自動化されたポートフォリオ・マネージャー、リクイディティ・プロバイダー、そしてプライス・センサー。Binance Smart Chainに最適化されています。",
-    "Hero-Cta": "交換",
-    "Hero-LearnMore": "さらに詳しく",
+    "Nav-Exchange": "両替",
+    "Hero-Title": "BSCのプログラム可能な流動性",
+    "Hero-Description": "自動化されたポートフォリオマネージャー、流動性プロバイダー、および価格センサー。 Binance Smart Chain用に最適化されています。",
+    "Hero-Cta": "両替",
+    "Hero-LearnMore": "もっと詳しく知る",
     "Footer-Liquidity": "流動性",
     "Footer-Volume": "ボリューム"
 }

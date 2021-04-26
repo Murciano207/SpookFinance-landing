@@ -55,7 +55,7 @@ const HeroTitle = styled.div`
   }
 
   ${MediaQuery.md} {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 `;
 

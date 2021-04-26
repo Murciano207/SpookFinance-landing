@@ -1,10 +1,10 @@
 {
     "Nav-Docs": "Docs",
-    "Nav-Exchange": "Exchange",
+    "Nav-Exchange": "Échange",
     "Hero-Title": "Liquidité programmable sur BSC",
-    "Hero-Description": "Gestionnaire de portefeuille automatisé, fournisseur de liquidités et capteur de prix. Optimisé pour Binance Smart Chain.",
-    "Hero-Cta": "Exchange",
-    "Hero-LearnMore": "En savoir plus",
+    "Hero-Description": "Gestionnaire de portefeuille automatisé, fournisseur de liquidité et capteur de prix. Optimisé pour Binance Smart Chain.",
+    "Hero-Cta": "Échange",
+    "Hero-LearnMore": "Apprendre encore plus",
     "Footer-Liquidity": "Liquidité",
-    "Footer-Volume": "Volume"
+    "Footer-Volume": "Le volume"
 }
