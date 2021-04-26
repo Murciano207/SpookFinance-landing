@@ -3,7 +3,10 @@
     "Nav-Pools": "Pool Management",
     "Nav-Exchange": "Exchange",
     "Hero-Title": "Programmable Liquidity on BSC",
-    "Hero-Description": "Create liquidity pools up to 8 tokens. Any weights. Add programmability through smart-contract owned pools.",
+    "Hero-Description": "Automated portfolio manager, liquidity provider, and price sensor. Optimized for Binance Smart Chain.", 
     "Hero-Cta": "Exchange",
-    "Hero-LearnMore": "Learn More"
+    "Hero-LearnMore": "Learn More",
+    "Footer-Liquidity": "Liquidity",
+    "Footer-Volume": "Volume",
+    "Footer-Pools": "Pools"
 }
