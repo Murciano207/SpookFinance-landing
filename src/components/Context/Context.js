@@ -20,8 +20,6 @@ const Context = ({ children }) => {
   }, []);
 
   const fetchPoolsData = async () => {
-    console.log('fetchPoolsData');
-
     const res = await fetch(SUBGRAPH_URL, {
       method: 'POST',
       headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
