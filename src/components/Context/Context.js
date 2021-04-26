@@ -1,12 +1,12 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 
 export const YogiContext = createContext(null);
 
 const Context = ({ children }) => {
-  const [price, setPrice] = useState("TBA");
-  const [liquidity, setLiquidity] = useState(0);
-  const [volume, setVolume] = useState(0);
-  const [pools, setPools] = useState(0);
+  const [price] = useState("TBA");
+  const [liquidity] = useState(0);
+  const [volume] = useState(0);
+  const [pools] = useState(0);
 
   // TODO: setup context
 
