@@ -26,6 +26,7 @@ const Hero = () => {
             <IconButton href='https://github.com/yogi-fi' icon={['fab', 'github']} />
             <IconButton href='https://twitter.com/yogi_finance' icon={['fab', 'twitter']} />
             <IconButton href='https://medium.com/yogi-fi' icon={['fab', 'medium']} />
+            <IconButton href='https://t.me/yogi_finance' icon={['fab', 'telegram']} />
           </HeroActionGroup>
         </HeroActions>
       </HeroContent>
