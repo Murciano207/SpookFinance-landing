@@ -120,13 +120,13 @@ const HeroAnim = styled.div`
   display: none; 
   
   ${MediaQuery.md} {
-    display: unset;
+    display: flex;
+    align-items: center;
   }
 `;
 
 const HeroLogo = styled.img`
   width: 20rem;
-  margin-top: -1rem;
   filter: drop-shadow(0 8px 1px rgba(6, 45, 56, .7));
 `;
 
