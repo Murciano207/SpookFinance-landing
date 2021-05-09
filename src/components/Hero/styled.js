@@ -102,7 +102,15 @@ const HeroActionGroup = styled.div`
 
     & + & {
       margin-top: unset;
-      margin-left: 3rem;
+    }    
+  }
+
+  ${MediaQuery.md} {
+    width: 100%;
+    max-width: unset;
+
+    & + & {
+      margin-top: 1rem;
     }    
   }
 `;
