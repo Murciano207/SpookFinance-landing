@@ -14,7 +14,7 @@ const BaseHero = styled.section`
   }
 
   ${MediaQuery.md} {
-    margin: 7rem auto;
+    margin: 12vh auto;
     justify-content: space-between;
   }
 
