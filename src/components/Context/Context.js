@@ -4,19 +4,19 @@ import query from './query';
 import commarize from "utils/commarize";
 
 const SUBGRAPHS = [
-  "https://api.thegraph.com/subgraphs/name/yogi-fi/yogi-subgraph",
-  "https://api.thegraph.com/subgraphs/name/yogi-fi/bsc",
+  // "https://api.thegraph.com/subgraphs/name/yogi-fi/yogi-subgraph",
+  // "https://api.thegraph.com/subgraphs/name/yogi-fi/bsc",
   "https://api.thegraph.com/subgraphs/name/yogi-fi/polygon"
 ];
 
 export const YogiContext = createContext(null);
 
-const formatCurrency = (n) => {
-  return `$${commarize(n)}`;
+const formatCurrency = (n, p = 2) => {
+  return `$${commarize(n, p)}`;
 }
 
-const formatNumber = (n) => {
-  return commarize(n, 0);
+const formatNumber = (n, p = 0) => {
+  return commarize(n, p);
 }
 
 const Context = ({ children }) => {
@@ -64,8 +64,8 @@ const Context = ({ children }) => {
     setLiquidity(formatCurrency(multichain.liquidity));
     setVolume(formatCurrency(multichain.volume));
     setFees(formatCurrency(multichain.fees));
-    setSwaps(formatNumber(multichain.swaps));
-    setPools(formatNumber(multichain.pools));
+    setSwaps(formatNumber(multichain.swaps, 2));
+    setPools(formatNumber(multichain.pools, 0));
   }
   
   return (
