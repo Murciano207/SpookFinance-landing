@@ -110,8 +110,12 @@ const HeroActionGroup = styled.div`
     max-width: unset;
 
     & + & {
-      margin-top: 1rem;
-    }    
+      margin-top: 1.5rem;
+    }
+
+    & * + * {
+      margin-left: 1.5rem;
+    }
   }
 `;
 
@@ -125,10 +129,5 @@ const HeroAnim = styled.div`
   }
 `;
 
-const HeroLogo = styled.img`
-  width: 20rem;
-  filter: drop-shadow(0 8px 1px rgba(6, 45, 56, .7));
-`;
 
-
-export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim, HeroLogo };
+export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim };

@@ -88,7 +88,7 @@ const NavDropdownBg = styled.div`
   top: -4.5rem;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 0% 0%, #02566f, #92dd50);
+  background: radial-gradient(circle at 0% 0%, #46037f, #2b176d);
 `;
 
 const NavDropdownList = styled.div`

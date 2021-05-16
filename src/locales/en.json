@@ -3,8 +3,8 @@
   "Nav-Docs": "Docs",
   "Nav-Pools": "Pool Management",
   "Nav-Exchange": "Exchange",
-  "Hero-Title": "Programmable Liquidity on BSC",
-  "Hero-Description": "Automated portfolio manager, liquidity provider, and price sensor. Optimized for Binance Smart Chain.",
+  "Hero-Title": "Programmable Liquidity",
+  "Hero-Description": "Automated portfolio manager, liquidity provider, and price sensor. Optimized for Polygon & BSC.",
   "Hero-Cta": "Exchange",
   "Hero-LearnMore": "Learn More",
   "Footer-Liquidity": "Liquidity",
@@ -12,5 +12,5 @@
   "Footer-Fees": "Fees",
   "Footer-Swaps": "Swaps",
   "Footer-Pools": "Pools",
-  "Crowdsale-Title": "Yogi BCS IDO"
+  "Crowdsale-Title": "BSC IDO"
 }

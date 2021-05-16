@@ -1,12 +1,10 @@
 import React from 'react';
-import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim, HeroLogo } from './styled';
+import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim } from './styled';
 
 import { useTranslation } from 'react-i18next';
 
 import { PrimaryButton, TextButton } from 'components/Button/Button';
 import IconButton from 'components/IconButton/IconButton';
-
-import YogiLogo from 'images/logo.svg'
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -31,7 +29,7 @@ const Hero = () => {
         </HeroActions>
       </HeroContent>
       <HeroAnim>
-        <HeroLogo src={YogiLogo} alt="Yogi Logo" />
+        {/* <HeroLogo src={YogiLogo} alt="Yogi Logo" /> */}
       </HeroAnim>
     </BaseHero>
   )

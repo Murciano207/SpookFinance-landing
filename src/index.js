@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-rendering: optimizeLegibility;
-    background: radial-gradient(circle at 0% 0%, #02566f, #92dd50);
+    background: radial-gradient(circle at 0% 0%, #4B0082, #1a2361);
     min-height: 100vh;
   }
 
