@@ -12,5 +12,8 @@
   "Footer-Fees": "Fees",
   "Footer-Swaps": "Swaps",
   "Footer-Pools": "Pools",
-  "Crowdsale-Title": "BSC IDO"
+  "Crowdsale-Title": "BSC IDO",
+  "Crowdsale-1": "To participate you need to send BNB to the crowdsale contract.",
+  "Crowdsale-2": "You will receive a proportional amount of $YOGI.",
+  "Crowdsale-3": "Remaining YOGI: {{ remaining }} / {{ total }}"
 }
