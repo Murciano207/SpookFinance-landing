@@ -42,7 +42,7 @@ const HeroContent = styled.div`
 
   ${MediaQuery.md} {
     text-align: left;
-    width: 32rem;
+    width: 30rem;
   }
 `;
 
@@ -50,6 +50,7 @@ const HeroTitle = styled.div`
   font-size: 2rem;
   line-height: 1.15;
   font-weight: 700;
+  margin-bottom: 2rem;
 
   ${MediaQuery.sm} {
     font-size: 3rem;
@@ -61,7 +62,6 @@ const HeroTitle = styled.div`
 `;
 
 const HeroDescription = styled.div`
-  margin-top: 2rem;
   font-size: 1.2rem;
   line-height: 1.75rem;
 `;

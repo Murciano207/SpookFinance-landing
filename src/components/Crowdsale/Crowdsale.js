@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import {
-  BaseCrowdsale,
-  CrowdsaleContent,
-  CrowdsaleTitle,
   CrowdsaleInstructions
 } from './styled';
+
+import {
+  BaseHero,
+  HeroTitle,
+  HeroContent,
+} from '../Hero/styled'
 
 import { useTranslation } from 'react-i18next';
 
@@ -47,9 +50,9 @@ const Crowdsale = () => {
   });
 
   return (
-    <BaseCrowdsale>
-      <CrowdsaleContent>
-        <CrowdsaleTitle>{t('Crowdsale-Title')}</CrowdsaleTitle>
+    <BaseHero>
+      <HeroContent>
+        <HeroTitle>{t('Crowdsale-Title')}</HeroTitle>
         <CrowdsaleInstructions>
           <div>{t('Crowdsale-1')}</div>
           <div>{t('Crowdsale-2')}</div>
@@ -64,8 +67,8 @@ const Crowdsale = () => {
           <div>1 YOGI = 0.001 BNB</div>
           <div>{t('Crowdsale-3', { remaining: yogiRemaining, total: "5,000,000" })}</div>
         </CrowdsaleInstructions>
-      </CrowdsaleContent>
-    </BaseCrowdsale>
+      </HeroContent>
+    </BaseHero>
   );
 };
 
