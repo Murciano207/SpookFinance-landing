@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const AbstractButton = styled.a`
   cursor: pointer;
@@ -39,4 +40,17 @@ const TextButton = styled(AbstractButton)`
   }
 `;
 
-export { PrimaryButton, TextButton };
+const TextLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: #17bf63;
+  }
+`
+
+export { PrimaryButton, TextButton, TextLink };

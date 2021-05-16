@@ -6,6 +6,11 @@ const BaseNav = styled.div`
   padding: 1rem 2rem;
 `;
 
+const BrandContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 const NavContainer = styled.div`
   display: flex;
   align-items: center;
@@ -106,4 +111,4 @@ const NavDropdownLink = styled.a`
   border-radius: 2rem;
 `; 
 
-export { BaseNav, NavContainer, NavBar, NavLogo, NavActions, NavMenu, NavDropdown, NavDropdownBg, NavDropdownList, NavDropdownLink };
+export { BaseNav, BrandContainer, NavContainer, NavBar, NavLogo, NavActions, NavMenu, NavDropdown, NavDropdownBg, NavDropdownList, NavDropdownLink };
