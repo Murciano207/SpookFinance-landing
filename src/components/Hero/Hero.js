@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim, HeroLogo } from './styled';
+import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim } from './styled';
 
 import { useTranslation } from 'react-i18next';
 
@@ -28,6 +28,9 @@ const Hero = () => {
           </HeroActionGroup>
         </HeroActions>
       </HeroContent>
+      <HeroAnim>
+        {/* <HeroLogo src={YogiLogo} alt="Yogi Logo" /> */}
+      </HeroAnim>
     </BaseHero>
   )
 };

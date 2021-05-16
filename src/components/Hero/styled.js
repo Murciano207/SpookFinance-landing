@@ -129,10 +129,5 @@ const HeroAnim = styled.div`
   }
 `;
 
-const HeroLogo = styled.img`
-  width: 20rem;
-  filter: drop-shadow(0 8px 1px rgba(6, 45, 56, .7));
-`;
 
-
-export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim, HeroLogo };
+export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim };
