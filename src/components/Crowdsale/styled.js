@@ -29,14 +29,14 @@ const BaseCrowdsale = styled.section`
 
 const CrowdsaleTitle = styled.div`
   font-size: 2rem;
-  line-height: 1.15;
   font-weight: 700;
+  margin-bottom: 1rem;
 
   ${MediaQuery.sm} {
     font-size: 3rem;
   }
 
-  ${MediaQuery.md} {
+  ${MediaQuery.lg} {
     font-size: 3.5rem;
   }
 `;
@@ -60,25 +60,17 @@ const CrowdsaleContent = styled.div`
   }
 `;
 
-const CrowdsaleAnim = styled.div`
-  position: relative;
-  display: none;
+const CrowdsaleInstructions  = styled.div`
+  line-height: 1.5rem;
 
-  ${MediaQuery.md} {
-    display: flex;
-    align-items: center;
+  & + & {
+    margin-top: 2rem;
   }
-`;
-
-const CrowdsaleLogo = styled.img`
-  width: 20rem;
-  filter: drop-shadow(0 8px 1px rgba(6, 45, 56, 0.7));
-`;
+`
 
 export {
   BaseCrowdsale,
   CrowdsaleTitle,
   CrowdsaleContent,
-  CrowdsaleAnim,
-  CrowdsaleLogo,
+  CrowdsaleInstructions
 };

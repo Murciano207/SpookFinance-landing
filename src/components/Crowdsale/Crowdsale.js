@@ -3,15 +3,13 @@ import { ethers } from 'ethers';
 import {
   BaseCrowdsale,
   CrowdsaleContent,
-  CrowdsaleAnim,
-  CrowdsaleLogo,
   CrowdsaleTitle,
+  CrowdsaleInstructions
 } from './styled';
 
 import { useTranslation } from 'react-i18next';
 
 import { TextButton } from 'components/Button/Button';
-import YogiLogo from 'images/logo.svg';
 import ERC20 from './ERC20.json';
 
 const Crowdsale = () => {
@@ -38,45 +36,36 @@ const Crowdsale = () => {
   return (
     <BaseCrowdsale>
       <CrowdsaleContent>
-        <div>
-          <CrowdsaleTitle>{t('Crowdsale-Title')}</CrowdsaleTitle>
-          <p>
-            To participate you need to send BNB to the crowdsale contract. You
-            will get YOGI in return. There are 5,000,000 YOGI to be distributed.
-            This is 5% of the total network.
-          </p>
-        </div>
-        <div>
-          <p>YOGI rate</p>
-          <p>1 YOGI = 0.001 BNB</p>
-        </div>
-        <div>
-          <p>
-            Crowdsale address:{' '}
+        <CrowdsaleTitle>{t('Crowdsale-Title')}</CrowdsaleTitle>
+        <CrowdsaleInstructions>
+          <div>To participate you need to send BNB to the crowdsale contract.</div>
+          <div>You will receive a proportional amount of {' '}
             <TextButton
               href="https://bscscan.com/address/0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247"
               target="_blank"
               rel="noopener noreferrer"
             >
-              0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247
+              $YOGI
             </TextButton>
-          </p>
-          <p>
-            YOGI address:{' '}
-            <TextButton
-              href="https://bscscan.com/address/0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247
-            </TextButton>
-          </p>
-        </div>
-        <p>Remaining YOGI: {yogiRemaining}</p>
+          </div>
+        </CrowdsaleInstructions>
+
+        <CrowdsaleInstructions>
+          <div>Crowdsale address:</div>
+          <TextButton
+            href="https://bscscan.com/address/0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247
+          </TextButton>
+        </CrowdsaleInstructions>
+
+        <CrowdsaleInstructions>
+          <div>1 YOGI = 0.001 BNB</div>
+          <div>Remaining YOGI: {yogiRemaining} / 5,000,000</div>
+        </CrowdsaleInstructions>
       </CrowdsaleContent>
-      <CrowdsaleAnim>
-        <CrowdsaleLogo src={YogiLogo} alt="Yogi Logo" />
-      </CrowdsaleAnim>
     </BaseCrowdsale>
   );
 };
