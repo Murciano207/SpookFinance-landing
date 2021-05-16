@@ -110,8 +110,12 @@ const HeroActionGroup = styled.div`
     max-width: unset;
 
     & + & {
-      margin-top: 1rem;
-    }    
+      margin-top: 1.5rem;
+    }
+
+    & * + * {
+      margin-left: 1.5rem;
+    }
   }
 `;
 
