@@ -4,7 +4,7 @@ import { MediaQuery } from 'constants/MediaQuery';
 const BaseHero = styled.section`
   display: flex;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 960px;
   padding: .5rem 1rem;
   margin: 4rem auto;
 
@@ -20,10 +20,12 @@ const BaseHero = styled.section`
 
   ${MediaQuery.lg} {
     padding: unset;
+    max-width: 1186px;
   }
 
   ${MediaQuery.xl} {
     margin: 25vh auto 6rem;
+    max-width: 1440px;
   }
 `;
 

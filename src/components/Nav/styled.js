@@ -16,8 +16,16 @@ const NavContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
+
+  ${MediaQuery.lg} {
+    max-width: 1186px;
+  }
+  
+  ${MediaQuery.xl} {
+    max-width: 1440px;
+  }
 `;
 
 const NavBar = styled.div`

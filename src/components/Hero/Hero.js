@@ -31,11 +31,11 @@ const Hero = () => {
       </HeroContent>
       <HeroAnim>
         <AnimBg />
-        <AnimSaturn />
-        <AnimAstronaut />
         <AnimChains />
         <AnimDefi />
         <AnimStables />
+        <AnimAstronaut />
+        <AnimSaturn />
       </HeroAnim>
     </BaseHero>
   )
