@@ -74,8 +74,8 @@ const Crowdsale = () => {
         <AnimChains />
         <AnimDefi />
         <AnimStables />
-        <AnimAstronaut />
         <AnimSaturn />
+        <AnimAstronaut />
       </HeroAnim>
     </BaseHero>
   );
