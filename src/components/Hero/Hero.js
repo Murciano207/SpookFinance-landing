@@ -34,8 +34,8 @@ const Hero = () => {
         <AnimChains />
         <AnimDefi />
         <AnimStables />
-        <AnimAstronaut />
         <AnimSaturn />
+        <AnimAstronaut />
       </HeroAnim>
     </BaseHero>
   )
