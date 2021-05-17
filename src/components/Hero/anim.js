@@ -67,13 +67,14 @@ const AnimChains = styled(AnimImg)`
     height: 40vh;
     width: 40vh;
     top: 40vh;
-    left: 0vh;
+    left: 0;
   }
 
   ${MediaQuery.xl} {
-    width: 35vh;
-    height: 35vh;
+    width: 30vh;
+    height: 30vh;
     top: 55vh;
+    left: 0;
   }
 `;
 
@@ -98,8 +99,8 @@ const AnimDefi = styled(AnimImg)`
   }
 
   ${MediaQuery.xl} {
-    width: 40vh;
-    height: 40vh;
+    width: 35vh;
+    height: 35vh;
     top: 18vh;
   }
 `;

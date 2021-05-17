@@ -25,7 +25,7 @@ const BaseHero = styled.section`
 
   ${MediaQuery.xl} {
     margin: 25vh auto 6rem;
-    max-width: 1440px;
+    max-width: 1280px;
   }
 `;
 
