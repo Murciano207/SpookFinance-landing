@@ -159,7 +159,7 @@ const AnimSaturn = styled(AnimImg)`
   width: 50%;
   height: 10vh;
   right: 0;
-  bottom: 0;
+  bottom: -10px;
 
   ${MediaQuery.sm} {
     display: none
@@ -167,6 +167,7 @@ const AnimSaturn = styled(AnimImg)`
 
   ${MediaQuery.md} {
     display: unset;
+    bottom: 0;
     height: 15vh;
     width: 100%;
   }

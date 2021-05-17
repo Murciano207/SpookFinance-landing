@@ -96,7 +96,7 @@ const NavDropdownBg = styled.div`
   top: -4.5rem;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 0% 0%, #46037f, #2b176d);
+  background: radial-gradient(circle at 0% 0%, #31037f, #1d135b);
 `;
 
 const NavDropdownList = styled.div`
@@ -114,7 +114,7 @@ const NavDropdownLink = styled.a`
   margin: .5rem 2rem;
   color: #fff;
   font-weight: 400;
-  border: 4px solid #fff;
+  border: 2px solid #fff;
   text-decoration: none;
   border-radius: 2rem;
 `; 
