@@ -148,6 +148,7 @@ const AnimAstronaut = styled(AnimImg)`
   ${MediaQuery.md} {
     display: unset;
     width: 100%;
+    bottom: 20vh;
     height: 35vh;
     filter: drop-shadow(0px 64px 32px #000c61);
   }
