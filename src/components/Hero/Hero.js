@@ -1,6 +1,6 @@
 import React from 'react';
-import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim } from './styled';
-import { Bg, Saturn, Astronaut, Chains, Defi, Stables } from './anim';
+import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup } from './styled';
+import { HeroAnim, AnimBg, AnimSaturn, AnimAstronaut, AnimChains, AnimDefi, AnimStables } from './anim';
 
 import { useTranslation } from 'react-i18next';
 
@@ -30,12 +30,12 @@ const Hero = () => {
         </HeroActions>
       </HeroContent>
       <HeroAnim>
-        <Bg />
-        <Saturn />
-        <Astronaut />
-        <Chains />
-        <Defi />
-        <Stables />
+        <AnimBg />
+        <AnimSaturn />
+        <AnimAstronaut />
+        <AnimChains />
+        <AnimDefi />
+        <AnimStables />
       </HeroAnim>
     </BaseHero>
   )

@@ -119,19 +119,4 @@ const HeroActionGroup = styled.div`
   }
 `;
 
-const HeroAnim = styled.div`
-  position: fixed;
-  background-color: #f0f;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  
-  ${MediaQuery.md} {
-    width: 60%;
-  }
-`;
-
-
-export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim };
+export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup };
