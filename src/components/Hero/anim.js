@@ -156,10 +156,11 @@ const AnimAstronaut = styled(AnimImg)`
 
 const AnimSaturn = styled(AnimImg)`
   background-image: url(${saturn});
+  background-position-y: bottom;
   width: 50%;
   height: 10vh;
   right: 0;
-  bottom: -10px;
+  bottom: 0;
 
   ${MediaQuery.sm} {
     display: none
@@ -167,7 +168,6 @@ const AnimSaturn = styled(AnimImg)`
 
   ${MediaQuery.md} {
     display: unset;
-    bottom: 0;
     height: 15vh;
     width: 100%;
   }
