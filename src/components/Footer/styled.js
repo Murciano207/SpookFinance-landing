@@ -12,10 +12,6 @@ const BaseFooter = styled.footer`
   scrollbar-width: none;
   -ms-overflow-style: none;
   background-color: rgba(17, 24, 73, 0.8);
-
-  ${MediaQuery.sm} {
-    bottom: 1rem;
-  }
 `;
 
 const FooterContainer = styled.div`
