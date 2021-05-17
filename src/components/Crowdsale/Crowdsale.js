@@ -19,7 +19,7 @@ import ERC20 from './ERC20.json';
 
 const Address= {
   Yogi: '0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247',
-  Crowdsale: '0x56bAb4AB4fbF2Fc35A5c4920F48388881acCB247'
+  Crowdsale: '0xefdE434792bd92f8b0F3d901416A363FA5331E74'
 }
 
 const ExplorerLink = (address, label) => {
