@@ -10,6 +10,8 @@ import {
   HeroContent,
 } from '../Hero/styled'
 
+import { HeroAnim, AnimBg, AnimSaturn, AnimAstronaut, AnimChains, AnimDefi, AnimStables } from '../Hero/anim';
+
 import { useTranslation } from 'react-i18next';
 
 import { TextButton } from 'components/Button/Button';
@@ -67,6 +69,14 @@ const Crowdsale = () => {
           <div>{t('Crowdsale-Remaining', { remaining: yogiRemaining, total: "5,000,000" })}</div>
         </CrowdsaleInstructions>
       </HeroContent>
+      <HeroAnim>
+        <AnimBg />
+        <AnimChains />
+        <AnimDefi />
+        <AnimStables />
+        <AnimAstronaut />
+        <AnimSaturn />
+      </HeroAnim>
     </BaseHero>
   );
 };

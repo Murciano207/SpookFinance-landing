@@ -93,7 +93,7 @@ const AnimAstronaut = styled(AnimImg)`
   height: 35vh;
   bottom: 20vh;
   filter: drop-shadow(0px 64px 32px #000c61);
-  animation: 2s ease-in-out 0s infinite alternate both running ${FloatingAnimation};
+  animation: 2s ease-in-out 0s infinite alternate-reverse both running ${FloatingAnimation};
 `;
 
 export { HeroAnim, AnimBg, AnimSaturn, AnimAstronaut, AnimChains, AnimDefi, AnimStables };
