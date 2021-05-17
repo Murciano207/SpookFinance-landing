@@ -7,7 +7,7 @@ import {
 
 import Context from 'components/Context/Context';
 import Nav from 'components/Nav/Nav';
-import Crowdsale from 'components/Crowdsale/Crowdsale';
+// import Crowdsale from 'components/Crowdsale/Crowdsale';
 import Hero from 'components/Hero/Hero';
 import Footer from 'components/Footer/Footer';
 
@@ -20,9 +20,9 @@ const Yogi = () => {
           <Route exact path="/">
             <Hero />
           </Route>
-          <Route path="/crowdsale">
+          {/* <Route path="/crowdsale">
             <Crowdsale />
-          </Route>
+          </Route> */}
         </Switch>
         <Footer />
       </Router>
