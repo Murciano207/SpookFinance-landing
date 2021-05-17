@@ -4,8 +4,7 @@ import query from './query';
 import commarize from "utils/commarize";
 
 const SUBGRAPHS = [
-  // "https://api.thegraph.com/subgraphs/name/yogi-fi/yogi-subgraph",
-  // "https://api.thegraph.com/subgraphs/name/yogi-fi/bsc",
+  "https://api.thegraph.com/subgraphs/name/yogi-fi/bsc",
   "https://api.thegraph.com/subgraphs/name/yogi-fi/polygon"
 ];
 
@@ -19,8 +18,15 @@ const formatNumber = (n, p = 0) => {
   return commarize(n, p);
 }
 
+const fetchYogiPrice = async () => {
+  const IDO_RATE = 0.0001;
+  const res = await fetch("https://mirror.yogi.fi/prices");
+  const { BNB } = await res.json();
+  return formatCurrency(Number(BNB) * IDO_RATE, 3);
+}
+
 const Context = ({ children }) => {
-  const [price, setPrice] = useState("TBA");
+  const [price, setPrice] = useState("0");
   const [liquidity, setLiquidity] = useState("0");
   const [volume, setVolume] = useState("0");
   const [fees, setFees] = useState("0");
@@ -58,9 +64,10 @@ const Context = ({ children }) => {
       }, multichain);
       multichain.pools += data.pools.length;
     }
-    
-    // TODO: get Yogi price
-    setPrice("TBA");
+
+    const price = await fetchYogiPrice();
+
+    setPrice(price);
     setLiquidity(formatCurrency(multichain.liquidity));
     setVolume(formatCurrency(multichain.volume));
     setFees(formatCurrency(multichain.fees));
