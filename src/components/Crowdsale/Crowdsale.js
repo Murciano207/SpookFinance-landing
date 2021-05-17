@@ -54,8 +54,7 @@ const Crowdsale = () => {
       <HeroContent>
         <HeroTitle>{t('Crowdsale-Title')}</HeroTitle>
         <CrowdsaleInstructions>
-          <div>{t('Crowdsale-1')}</div>
-          <div>{t('Crowdsale-2')}</div>
+          {t('Crowdsale-Instructions')}
         </CrowdsaleInstructions>
 
         <CrowdsaleInstructions>
@@ -65,7 +64,7 @@ const Crowdsale = () => {
 
         <CrowdsaleInstructions>
           <div>1 YOGI = 0.001 BNB</div>
-          <div>{t('Crowdsale-3', { remaining: yogiRemaining, total: "5,000,000" })}</div>
+          <div>{t('Crowdsale-Remaining', { remaining: yogiRemaining, total: "5,000,000" })}</div>
         </CrowdsaleInstructions>
       </HeroContent>
     </BaseHero>
