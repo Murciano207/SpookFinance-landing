@@ -137,7 +137,7 @@ const AnimAstronaut = styled(AnimImg)`
   background-image: url(${astronaut});
   width: 50%;
   right: 0;
-  height: 35vh;
+  height: 25vh;
   bottom: 10vh;
   animation: 2s ease-in-out 0s infinite alternate-reverse both running ${FloatingAnimation};
 
