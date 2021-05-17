@@ -5,8 +5,8 @@ import bg from '../../images/bg.png';
 import saturn from '../../images/saturn.png';
 import astronaut from '../../images/astronaut.png';
 import chains from '../../images/chains.png';
-import defi from '../../images/defi.png';
-import stables from '../../images/stables.png';
+// import defi from '../../images/defi.png';
+// import stables from '../../images/stables.png';
 
 const HeroAnim = styled.div`
   position: fixed;
