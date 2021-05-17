@@ -120,12 +120,16 @@ const HeroActionGroup = styled.div`
 `;
 
 const HeroAnim = styled.div`
-  position: relative;
-  display: none; 
+  position: fixed;
+  background-color: #f0f;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
   
   ${MediaQuery.md} {
-    display: flex;
-    align-items: center;
+    width: 60%;
   }
 `;
 
