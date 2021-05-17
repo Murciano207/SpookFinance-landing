@@ -19,7 +19,7 @@ const formatNumber = (n, p = 0) => {
 }
 
 const fetchYogiPrice = async () => {
-  const IDO_RATE = 0.0001;
+  const IDO_RATE = 0.001;
   const res = await fetch("https://mirror.yogi.fi/prices");
   const { BNB } = await res.json();
   return formatCurrency(Number(BNB) * IDO_RATE, 3);
