@@ -18,6 +18,7 @@ const Name = styled.div`
 
   ${MediaQuery.md} {
     margin-right: .5rem;
+    margin-bottom: unset;
   }
 `;
 

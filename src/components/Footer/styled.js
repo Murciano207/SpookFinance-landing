@@ -11,7 +11,7 @@ const BaseFooter = styled.footer`
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  background-color: rgba(17, 24, 73, 1);
+  background-color: rgba(17, 24, 73, 0.8);
 
   ${MediaQuery.sm} {
     bottom: 1rem;
@@ -25,7 +25,7 @@ const FooterContainer = styled.div`
   justify-content: flex-start;
   max-width: 960px;
   padding: 0 2rem;
-  margin: 1.3rem auto .5rem;
+  margin: 1rem auto;
 
   ${MediaQuery.sm} {
     justify-content: space-between;
