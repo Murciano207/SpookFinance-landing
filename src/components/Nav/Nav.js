@@ -40,7 +40,7 @@ const Nav = () => {
           </NavMenu>
         </NavBar>
         <NavActions>
-          {/* <TextLink to="/crowdsale">{t('Nav-IDO')}</TextLink> */}
+          <TextLink to="/crowdsale">{t('Nav-IDO')}</TextLink>
           <TextButton href="https://docs.yogi.fi">{t('Nav-Docs')}</TextButton>
           <TextButton href="https://pools.yogi.fi">{t('Nav-Pools')}</TextButton>
           <PrimaryButton href="https://exchange.yogi.fi">
@@ -52,9 +52,9 @@ const Nav = () => {
       <NavDropdown className={`${showDropdown ? 'active' : ''}`}>
         <NavDropdownBg />
         <NavDropdownList>
-          {/* <NavDropdownLink href="/crowdsale">
+          <NavDropdownLink href="/crowdsale">
             {t('Nav-IDO')}
-          </NavDropdownLink> */}
+          </NavDropdownLink>
           <NavDropdownLink href="https://docs.yogi.fi">
             {t('Nav-Docs')}
           </NavDropdownLink>
