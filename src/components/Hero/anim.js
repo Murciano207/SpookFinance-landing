@@ -45,7 +45,7 @@ const AnimBg = styled(AnimImg)`
 
   ${MediaQuery.md} {
     display: unset;
-    filter: brightness(1.3);
+    filter: brightness(1.1);
     opacity: 1;
   }
 `;
