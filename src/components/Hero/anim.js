@@ -19,7 +19,7 @@ const HeroAnim = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: -10;
+  z-index: 10;
   
   ${MediaQuery.md} {
     width: 60%;
@@ -39,13 +39,14 @@ const AnimBg = styled(AnimImg)`
   width: 100%;
   background-image: url(${bg});
   background-position-y: bottom;
+  background-size: cover;
   opacity: 0.5;
   filter: brightness(1.1);
   background-blend-mode: luminosity;
 
   ${MediaQuery.md} {
     display: unset;
-    filter: brightness(1.1);
+    filter: brightness(1.2);
     opacity: 1;
   }
 `;
@@ -55,7 +56,7 @@ const AnimChains = styled(AnimImg)`
   background-image: url(${chains});
   height: 30vh;
   width: 30vh;
-  top: 55vh;
+  bottom: 20vh;
   left: 2vw;
   filter: drop-shadow(0px 32px 20px #000c61);
 
@@ -66,15 +67,13 @@ const AnimChains = styled(AnimImg)`
   ${MediaQuery.md} {
     height: 40vh;
     width: 40vh;
-    top: 40vh;
-    left: 0;
+    left: 0vh;
   }
 
   ${MediaQuery.xl} {
+    bottom: 15vh;
     width: 30vh;
     height: 30vh;
-    top: 55vh;
-    left: 0;
   }
 `;
 
@@ -83,7 +82,7 @@ const AnimDefi = styled(AnimImg)`
   background-image: url(${defi});
   width: 30vh;
   height: 30vh;
-  top: 15vh;
+  bottom: 35vh;
   right: 2vw;
   filter: drop-shadow(0px 32px 20px #000c61);
 
@@ -92,25 +91,20 @@ const AnimDefi = styled(AnimImg)`
   }
 
   ${MediaQuery.md} {
-    width: 45vh;
-    height: 45vh;
-    top: 15vh;
     right: 0;
   }
 
   ${MediaQuery.xl} {
-    width: 30vh;
-    height: 30vh;
-    top: 30vh;
   }
 `;
+
 
 const AnimStables = styled(AnimImg)`
   display: none;
   background-image: url(${stables});
   width: 15vh;
   height: 15vh;
-  top: 12vh;
+  bottom: 58vh;
   left: 20vw;
   filter: drop-shadow(0px 32px 20px #000c61);
 
@@ -121,15 +115,13 @@ const AnimStables = styled(AnimImg)`
   ${MediaQuery.md} {
     width: 20vh;
     height: 20vh;
-    top: 12vh;
     left: 15vw;
   }
 
   ${MediaQuery.xl} {
-    width: 15vh;
-    height: 15vh;
-    top: 20vh;
-    left: 17vw;
+    width: 18vh;
+    height: 18vh;
+    left: 18vw;
   }
 `;
 
@@ -153,7 +145,7 @@ const AnimAstronaut = styled(AnimImg)`
     filter: drop-shadow(0px 64px 32px #000c61);
   }
 
-  ${MediaQuery.md} {
+  ${MediaQuery.xl} {
     height: 30vh;
   }
 `;
