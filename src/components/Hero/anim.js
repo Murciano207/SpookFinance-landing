@@ -98,9 +98,9 @@ const AnimDefi = styled(AnimImg)`
   }
 
   ${MediaQuery.xl} {
-    width: 40vh;
-    height: 40vh;
-    top: 18vh;
+    width: 30vh;
+    height: 30vh;
+    top: 30vh;
   }
 `;
 
@@ -126,10 +126,10 @@ const AnimStables = styled(AnimImg)`
   }
 
   ${MediaQuery.xl} {
-    width: 18vh;
-    height: 18vh;
-    top: 15vh;
-    left: 18vw;
+    width: 15vh;
+    height: 15vh;
+    top: 20vh;
+    left: 17vw;
   }
 `;
 
@@ -151,6 +151,10 @@ const AnimAstronaut = styled(AnimImg)`
     bottom: 20vh;
     height: 35vh;
     filter: drop-shadow(0px 64px 32px #000c61);
+  }
+
+  ${MediaQuery.md} {
+    height: 30vh;
   }
 `;
 
