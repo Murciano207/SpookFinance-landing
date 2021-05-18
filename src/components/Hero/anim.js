@@ -19,7 +19,7 @@ const HeroAnim = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: -10;
   
   ${MediaQuery.md} {
     width: 60%;
@@ -40,13 +40,12 @@ const AnimBg = styled(AnimImg)`
   background-image: url(${bg});
   background-position-y: bottom;
   background-size: cover;
-  opacity: 0.5;
-  filter: brightness(1.1);
+  opacity: 0.3;
   background-blend-mode: luminosity;
 
   ${MediaQuery.md} {
     display: unset;
-    filter: brightness(1.2);
+    filter: brightness(1.3);
     opacity: 1;
   }
 `;
@@ -54,9 +53,9 @@ const AnimBg = styled(AnimImg)`
 const AnimChains = styled(AnimImg)`
   display: none;
   background-image: url(${chains});
-  height: 30vh;
-  width: 30vh;
-  bottom: 20vh;
+  height: 20vw;
+  width: 20vw;
+  bottom: 15vh;
   left: 2vw;
   filter: drop-shadow(0px 32px 20px #000c61);
 
@@ -65,9 +64,10 @@ const AnimChains = styled(AnimImg)`
   }
 
   ${MediaQuery.md} {
-    height: 40vh;
-    width: 40vh;
-    left: 0vh;
+    height: 15vw;
+    width: 15vw;
+    bottom: 20vh;
+    left: 2vw;
   }
 
   ${MediaQuery.xl} {
@@ -80,9 +80,9 @@ const AnimChains = styled(AnimImg)`
 const AnimDefi = styled(AnimImg)`
   display: none;
   background-image: url(${defi});
-  width: 30vh;
-  height: 30vh;
-  bottom: 35vh;
+  height: 25vw;
+  width: 25vw;
+  bottom: 45vh;
   right: 2vw;
   filter: drop-shadow(0px 32px 20px #000c61);
 
@@ -91,21 +91,20 @@ const AnimDefi = styled(AnimImg)`
   }
 
   ${MediaQuery.md} {
+    height: 18vw;
+    width: 18vw;
+    bottom: 35vh;
     right: 0;
   }
-
-  ${MediaQuery.xl} {
-  }
 `;
-
 
 const AnimStables = styled(AnimImg)`
   display: none;
   background-image: url(${stables});
-  width: 15vh;
-  height: 15vh;
-  bottom: 58vh;
-  left: 20vw;
+  width: 10vw;
+  height: 10vw;
+  bottom: 70vh;
+  left: 15vw;
   filter: drop-shadow(0px 32px 20px #000c61);
 
   ${MediaQuery.sm} {
@@ -113,14 +112,13 @@ const AnimStables = styled(AnimImg)`
   }
 
   ${MediaQuery.md} {
-    width: 20vh;
-    height: 20vh;
+    width: 10vw;
+    height: 10vw;
+    bottom: 65vh;
     left: 15vw;
   }
 
   ${MediaQuery.xl} {
-    width: 18vh;
-    height: 18vh;
     left: 18vw;
   }
 `;
