@@ -105,7 +105,6 @@ const AnimDefi = styled(AnimImg)`
   }
 `;
 
-
 const AnimStables = styled(AnimImg)`
   display: none;
   background-image: url(${stables});
