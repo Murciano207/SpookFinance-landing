@@ -36,9 +36,14 @@ const Context = ({ children }) => {
 
   useEffect(() => {
     fetchPoolsData();
+    const interval = setInterval(async () => {
+      await fetchPoolsData();
+    }, 5 * 60 * 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const fetchPoolsData = async () => {
+    console.log('pools data', Date.now());
     let multichain = { 
       liquidity: 0,
       volume: 0,

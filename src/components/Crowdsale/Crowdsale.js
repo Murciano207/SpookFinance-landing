@@ -40,18 +40,18 @@ const Crowdsale = () => {
   const [yogiTotal, setYogiTotal] = useState('0');
 
   useEffect(() => {
-    const main = async () => {
-      console.log('fetch remaining');
-      const provider = new ethers.providers.JsonRpcProvider('https://bsc-dataseed.binance.org/');
-      const yogi = await new ethers.Contract(Address.Yogi, ERC20, provider);
-      const remaining = await yogi.balanceOf(Address.Crowdsale);
-      setYogiRemaining(
-        Number(ethers.utils.formatEther(remaining.toString())).toLocaleString()
-      );
-      setYogiTotal(Number(5000000).toLocaleString());
-    };
-    main();
-  });
+    fetchYogiBalance();
+  }, []);
+
+  const fetchYogiBalance = async () => {
+    const provider = new ethers.providers.JsonRpcProvider('https://bsc-dataseed.binance.org/');
+    const yogi = await new ethers.Contract(Address.Yogi, ERC20, provider);
+    const remaining = await yogi.balanceOf(Address.Crowdsale);
+    setYogiRemaining(
+      Number(ethers.utils.formatEther(remaining.toString())).toLocaleString()
+    );
+    setYogiTotal(Number(5000000).toLocaleString());
+  };
   
   return (
     <BaseHero>
