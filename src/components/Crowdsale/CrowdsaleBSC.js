@@ -34,7 +34,7 @@ const ExplorerLink = (address, label) => {
   )
 }
 
-const Crowdsale = () => {
+const CrowdsaleBSC = () => {
   const { t } = useTranslation();
   const [yogiRemaining, setYogiRemaining] = useState('0');
   const [yogiTotal, setYogiTotal] = useState('0');
@@ -56,9 +56,9 @@ const Crowdsale = () => {
   return (
     <BaseHero>
       <HeroContent>
-        <HeroTitle>{t('Crowdsale-Title')}</HeroTitle>
+        <HeroTitle>{t('Crowdsale-Title', { chain: 'BSC'})}</HeroTitle>
         <CrowdsaleInstructions>
-          {t('Crowdsale-Instructions')}
+          {t('Crowdsale-Instructions', { native: 'BNB'})}
         </CrowdsaleInstructions>
 
         <CrowdsaleInstructions>
@@ -83,4 +83,4 @@ const Crowdsale = () => {
   );
 };
 
-export default Crowdsale;
+export default CrowdsaleBSC;

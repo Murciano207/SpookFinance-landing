@@ -2,14 +2,16 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 
 import Context from 'components/Context/Context';
 import Nav from 'components/Nav/Nav';
-import Crowdsale from 'components/Crowdsale/Crowdsale';
 import Hero from 'components/Hero/Hero';
 import Footer from 'components/Footer/Footer';
+import CrowdsaleBSC from 'components/Crowdsale/CrowdsaleBSC';
+import CrowdsalePolygon from 'components/Crowdsale/CrowdsalePolygon';
 
 const Yogi = () => {
   return (
@@ -20,8 +22,14 @@ const Yogi = () => {
           <Route exact path="/">
             <Hero />
           </Route>
+          <Route path="/buy/bsc">
+            <CrowdsaleBSC />
+          </Route>
+          <Route path="/buy/polygon">
+            <CrowdsalePolygon />
+          </Route>
           <Route path="/buy">
-            <Crowdsale />
+            <Redirect from='/buy' to="/buy/bsc" />
           </Route>
         </Switch>
         <Footer />
