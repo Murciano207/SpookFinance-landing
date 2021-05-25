@@ -40,7 +40,8 @@ const Nav = () => {
           </NavMenu>
         </NavBar>
         <NavActions>
-          <TextLink to="/buy">{t('Nav-Crowdsale')}</TextLink>
+          <TextLink to="/buy/bsc">Buy BSC</TextLink>
+          <TextLink to="/buy/polygon">Buy Polygon</TextLink>
           <TextButton href="https://docs.yogi.fi">{t('Nav-Docs')}</TextButton>
           <TextButton href="https://farms.yogi.fi">{t('Nav-Farms')}</TextButton>
           <TextButton href="https://pools.yogi.fi">{t('Nav-Pools')}</TextButton>
@@ -53,8 +54,11 @@ const Nav = () => {
       <NavDropdown className={`${showDropdown ? 'active' : ''}`}>
         <NavDropdownBg />
         <NavDropdownList>
-          <NavDropdownLink href="/buy">
-            {t('Nav-Crowdsale')}
+          <NavDropdownLink href="/buy/bsc">
+            Buy BSC
+          </NavDropdownLink>
+          <NavDropdownLink href="/buy/polygon">
+            Buy Polygon
           </NavDropdownLink>
           <NavDropdownLink href="https://exchange.yogi.fi">
             {t('Nav-Exchange')}

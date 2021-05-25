@@ -110,7 +110,7 @@ const NavDropdownList = styled.div`
 `;
 
 const NavDropdownLink = styled.a`
-  padding: 1rem 3rem;
+  padding: .75rem 3rem;
   margin: .5rem 2rem;
   color: #fff;
   font-weight: 400;
