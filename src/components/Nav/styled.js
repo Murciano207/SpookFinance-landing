@@ -77,7 +77,7 @@ const NavDropdown = styled.div`
   top: 4.5rem;
   left: 0;
   right: 0;
-  height: 19rem;
+  height: 24rem;
   box-shadow: 0 6px 4px 0px rgba(0, 0, 0, .3);
   z-index: 10;
   overflow: hidden;
@@ -103,7 +103,7 @@ const NavDropdownList = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 19rem;
+  height: 24rem;
   width: 100%;
   display: flex;
   flex-direction: column;

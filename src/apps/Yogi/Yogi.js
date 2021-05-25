@@ -20,7 +20,7 @@ const Yogi = () => {
           <Route exact path="/">
             <Hero />
           </Route>
-          <Route path="/crowdsale">
+          <Route path="/buy">
             <Crowdsale />
           </Route>
         </Switch>
