@@ -64,6 +64,7 @@ const CrowdsalePolygon = () => {
         <CrowdsaleInstructions>
           <div>Crowdsale address:</div>
           { ExplorerLink(Address.Crowdsale, Address.Crowdsale) }
+          <div>Recommended gas limit: > {Number(70000).toLocaleString()}</div>
         </CrowdsaleInstructions>
 
         <CrowdsaleInstructions>
