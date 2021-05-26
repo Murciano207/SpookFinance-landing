@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
-import query from './query';
 
 import commarize from "utils/commarize";
+import { fetchStats, fetchYogiPrice } from "utils/gqlHelpers";
 
 const SUBGRAPHS = [
   "https://api.thegraph.com/subgraphs/name/yogi-fi/bsc",
@@ -18,12 +18,16 @@ const formatNumber = (n, p = 0) => {
   return commarize(n, p);
 }
 
-const fetchYogiPrice = async () => {
-  const IDO_RATE = 0.001;
-  const snapshot = Math.floor(Date.now() / (15 * 60 * 1000));
-  const res = await fetch(`https://mirror.yogi.fi/prices?_=${snapshot}`);
-  const { BNB } = await res.json();
-  return formatCurrency(Number(BNB) * IDO_RATE, 3);
+const getYogiPrice = async () => {
+  const [bsc, polygon] = await Promise.all([fetchYogiPrice(SUBGRAPHS[0]), fetchYogiPrice(SUBGRAPHS[1])]);
+  
+  const prices = {
+    bsc: Number(bsc['tokenPrices'][0]['price']),
+    polygon: Number(polygon['tokenPrices'][0]['price'])
+  }
+
+  // TODO: should we use average instead of max?
+  return formatCurrency(Math.max(prices.bsc, prices.polygon) || 0, 3);
 }
 
 const Context = ({ children }) => {
@@ -44,6 +48,10 @@ const Context = ({ children }) => {
 
   const fetchPoolsData = async () => {
     console.log('pools data', Date.now());
+
+    const price = await getYogiPrice();
+    setPrice(price);
+    
     let multichain = { 
       liquidity: 0,
       volume: 0,
@@ -53,14 +61,8 @@ const Context = ({ children }) => {
     };
      
     for (let i = 0; i < SUBGRAPHS.length; i++) {
-      const res = await fetch(SUBGRAPHS[i], {
-        method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: query })
-      });
-    
-      const { data } = await res.json();
-
+      const data = await fetchStats(SUBGRAPHS[i]);
+      
       multichain = data.pools.reduce(( acc, p ) => {
         acc.liquidity += Number(p.liquidity);
         acc.volume += Number(p.totalSwapVolume);
@@ -71,9 +73,6 @@ const Context = ({ children }) => {
       multichain.pools += data.pools.length;
     }
 
-    const price = await fetchYogiPrice();
-
-    setPrice(price);
     setLiquidity(formatCurrency(multichain.liquidity));
     setVolume(formatCurrency(multichain.volume));
     setFees(formatCurrency(multichain.fees));
