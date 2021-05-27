@@ -1,5 +1,14 @@
 import React from 'react';
-import { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim, HeroLogo } from './styled';
+import {
+  BaseHero,
+  HeroContent,
+  HeroTitle,
+  HeroDescription,
+  HeroActions,
+  HeroActionGroup,
+  HeroAnim,
+  HeroLogo,
+} from './styled';
 
 import { useTranslation } from 'react-i18next';
 
@@ -10,7 +19,7 @@ import YogiLogo from 'images/logo.svg';
 
 const Hero = () => {
   const { t } = useTranslation();
-  
+
   return (
     <BaseHero>
       <HeroContent>
@@ -18,15 +27,34 @@ const Hero = () => {
         <HeroDescription>{t('Hero-Description')}</HeroDescription>
         <HeroActions>
           <HeroActionGroup>
-            <PrimaryButton href='https://exchange.yogi.fi'>{t('Hero-Cta')}</PrimaryButton>
-            <TextButton href='https://docs.yogi.fi'>{t('Hero-LearnMore')}</TextButton>
+            <PrimaryButton href="https://exchange.yogi.fi">
+              {t('Hero-Cta')}
+            </PrimaryButton>
+            <TextButton href="https://docs.yogi.fi">
+              {t('Hero-LearnMore')}
+            </TextButton>
           </HeroActionGroup>
           <HeroActionGroup>
-            <IconButton href='https://discord.gg/W6wUZ4tgNC' icon={['fab', 'discord']} />
-            <IconButton href='https://github.com/yogi-fi' icon={['fab', 'github']} />
-            <IconButton href='https://twitter.com/yogi_finance' icon={['fab', 'twitter']} />
-            <IconButton href='https://medium.com/yogi-fi' icon={['fab', 'medium']} />
-            <IconButton href='https://t.me/yogi_finance' icon={['fab', 'telegram']} />
+            <IconButton
+              href="https://discord.gg/W6wUZ4tgNC"
+              icon={['fab', 'discord']}
+            />
+            <IconButton
+              href="https://github.com/yogi-fi"
+              icon={['fab', 'github']}
+            />
+            <IconButton
+              href="https://twitter.com/yogi_finance"
+              icon={['fab', 'twitter']}
+            />
+            <IconButton
+              href="https://medium.com/yogi-fi"
+              icon={['fab', 'medium']}
+            />
+            <IconButton
+              href="https://t.me/joinchat/3Nt5MNyVRUIyYzU5"
+              icon={['fab', 'telegram']}
+            />
           </HeroActionGroup>
         </HeroActions>
       </HeroContent>
@@ -34,7 +62,7 @@ const Hero = () => {
         <HeroLogo src={YogiLogo} alt="Yogi Logo" />
       </HeroAnim>
     </BaseHero>
-  )
+  );
 };
 
 export default Hero;
