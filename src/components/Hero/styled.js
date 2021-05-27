@@ -4,7 +4,7 @@ import { MediaQuery } from 'constants/MediaQuery';
 const BaseHero = styled.section`
   display: flex;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 960px;
   padding: .5rem 1rem;
   margin: 4rem auto;
 
@@ -20,10 +20,12 @@ const BaseHero = styled.section`
 
   ${MediaQuery.lg} {
     padding: unset;
+    max-width: 1186px;
   }
 
   ${MediaQuery.xl} {
-    margin: 25vh auto 6rem;
+    margin: 20vh auto 6rem;
+    max-width: 1280px;
   }
 `;
 
@@ -42,7 +44,7 @@ const HeroContent = styled.div`
 
   ${MediaQuery.md} {
     text-align: left;
-    width: 32rem;
+    width: 30rem;
   }
 `;
 
@@ -50,18 +52,18 @@ const HeroTitle = styled.div`
   font-size: 2rem;
   line-height: 1.15;
   font-weight: 700;
+  margin-bottom: 2rem;
 
   ${MediaQuery.sm} {
     font-size: 3rem;
   }
 
-  ${MediaQuery.md} {
+  ${MediaQuery.xl} {
     font-size: 3.5rem;
   }
 `;
 
 const HeroDescription = styled.div`
-  margin-top: 2rem;
   font-size: 1.2rem;
   line-height: 1.75rem;
 `;
@@ -110,25 +112,13 @@ const HeroActionGroup = styled.div`
     max-width: unset;
 
     & + & {
-      margin-top: 1rem;
-    }    
+      margin-top: 1.5rem;
+    }
+
+    & * + * {
+      margin-left: 1.5rem;
+    }
   }
 `;
 
-const HeroAnim = styled.div`
-  position: relative;
-  display: none; 
-  
-  ${MediaQuery.md} {
-    display: flex;
-    align-items: center;
-  }
-`;
-
-const HeroLogo = styled.img`
-  width: 20rem;
-  filter: drop-shadow(0 8px 1px rgba(6, 45, 56, .7));
-`;
-
-
-export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup, HeroAnim, HeroLogo };
+export { BaseHero, HeroContent, HeroTitle, HeroDescription, HeroActions, HeroActionGroup };

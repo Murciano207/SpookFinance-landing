@@ -6,16 +6,21 @@ import {
   HeroDescription,
   HeroActions,
   HeroActionGroup,
-  HeroAnim,
-  HeroLogo,
 } from './styled';
+import {
+  HeroAnim,
+  AnimBg,
+  AnimSaturn,
+  AnimAstronaut,
+  AnimChains,
+  AnimDefi,
+  AnimStables,
+} from './anim';
 
 import { useTranslation } from 'react-i18next';
 
 import { PrimaryButton, TextButton } from 'components/Button/Button';
 import IconButton from 'components/IconButton/IconButton';
-
-import YogiLogo from 'images/logo.svg';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -59,7 +64,12 @@ const Hero = () => {
         </HeroActions>
       </HeroContent>
       <HeroAnim>
-        <HeroLogo src={YogiLogo} alt="Yogi Logo" />
+        <AnimBg />
+        <AnimChains />
+        <AnimDefi />
+        <AnimStables />
+        <AnimSaturn />
+        <AnimAstronaut />
       </HeroAnim>
     </BaseHero>
   );

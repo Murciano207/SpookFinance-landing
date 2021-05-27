@@ -5,13 +5,11 @@ const BaseStat = styled.div`
   display: flex;
   flex-direction: column;
   font-weight: 600;
-
-  & + & {
-    padding-left: 2rem;
-  }
-
+  padding: 0 1.5rem;
+  
   ${MediaQuery.md} {
     flex-direction: row;
+    padding: 0;
   }
 `;
 
@@ -20,6 +18,7 @@ const Name = styled.div`
 
   ${MediaQuery.md} {
     margin-right: .5rem;
+    margin-bottom: unset;
   }
 `;
 

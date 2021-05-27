@@ -1,6 +1,6 @@
 {
   "name": "yogi-landing",
-  "version": "0.2.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -10,11 +10,15 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "ethers": "^5.1.4",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
     "i18next": "^20.2.1",
     "i18next-browser-languagedetector": "^6.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.8.13",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.3",
     "styled-normalize": "^8.0.7",

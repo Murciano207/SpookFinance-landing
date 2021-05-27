@@ -1,26 +1,37 @@
 import { createContext, useState, useEffect } from "react";
-import query from './query';
 
 import commarize from "utils/commarize";
+import { fetchStats, fetchYogiPrice } from "utils/gqlHelpers";
 
 const SUBGRAPHS = [
-  "https://api.thegraph.com/subgraphs/name/yogi-fi/yogi-subgraph",
   "https://api.thegraph.com/subgraphs/name/yogi-fi/bsc",
   "https://api.thegraph.com/subgraphs/name/yogi-fi/polygon"
 ];
 
 export const YogiContext = createContext(null);
 
-const formatCurrency = (n) => {
-  return `$${commarize(n)}`;
+const formatCurrency = (n, p = 2) => {
+  return `$${commarize(n, p)}`;
 }
 
-const formatNumber = (n) => {
-  return commarize(n, 0);
+const formatNumber = (n, p = 0) => {
+  return commarize(n, p);
+}
+
+const getYogiPrice = async () => {
+  const [bsc, polygon] = await Promise.all([fetchYogiPrice(SUBGRAPHS[0]), fetchYogiPrice(SUBGRAPHS[1])]);
+  
+  const prices = {
+    bsc: Number(bsc['tokenPrices'][0]['price']),
+    polygon: Number(polygon['tokenPrices'][0]['price'])
+  }
+
+  // TODO: should we use average instead of max?
+  return formatCurrency(Math.max(prices.bsc, prices.polygon) || 0, 3);
 }
 
 const Context = ({ children }) => {
-  const [price, setPrice] = useState("TBA");
+  const [price, setPrice] = useState("0");
   const [liquidity, setLiquidity] = useState("0");
   const [volume, setVolume] = useState("0");
   const [fees, setFees] = useState("0");
@@ -29,9 +40,18 @@ const Context = ({ children }) => {
 
   useEffect(() => {
     fetchPoolsData();
+    const interval = setInterval(async () => {
+      await fetchPoolsData();
+    }, 5 * 60 * 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const fetchPoolsData = async () => {
+    console.log('pools data', Date.now());
+
+    const price = await getYogiPrice();
+    setPrice(price);
+    
     let multichain = { 
       liquidity: 0,
       volume: 0,
@@ -41,14 +61,8 @@ const Context = ({ children }) => {
     };
      
     for (let i = 0; i < SUBGRAPHS.length; i++) {
-      const res = await fetch(SUBGRAPHS[i], {
-        method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: query })
-      });
-    
-      const { data } = await res.json();
-
+      const data = await fetchStats(SUBGRAPHS[i]);
+      
       multichain = data.pools.reduce(( acc, p ) => {
         acc.liquidity += Number(p.liquidity);
         acc.volume += Number(p.totalSwapVolume);
@@ -58,14 +72,12 @@ const Context = ({ children }) => {
       }, multichain);
       multichain.pools += data.pools.length;
     }
-    
-    // TODO: get Yogi price
-    setPrice("TBA");
+
     setLiquidity(formatCurrency(multichain.liquidity));
     setVolume(formatCurrency(multichain.volume));
     setFees(formatCurrency(multichain.fees));
-    setSwaps(formatNumber(multichain.swaps));
-    setPools(formatNumber(multichain.pools));
+    setSwaps(formatNumber(multichain.swaps, 2));
+    setPools(formatNumber(multichain.pools, 0));
   }
   
   return (
