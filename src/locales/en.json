@@ -1,5 +1,4 @@
 {
-  "Nav-Crowdsale": "Buy",
   "Nav-Docs": "Docs",
   "Nav-Pools": "Pools",
   "Nav-Farms": "Farms",
@@ -12,8 +11,5 @@
   "Footer-Volume": "Volume",
   "Footer-Fees": "Fees",
   "Footer-Swaps": "Swaps",
-  "Footer-Pools": "Pools",
-  "Crowdsale-Title": "{{ chain }} Crowdsale",
-  "Crowdsale-Instructions": "To participate you need to send {{ native }} to the crowdsale contract. You will receive a proportional amount of $YOGI.",
-  "Crowdsale-Remaining": "Remaining YOGI: {{ remaining }} / {{ total }}"
+  "Footer-Pools": "Pools"
 }
