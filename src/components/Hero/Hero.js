@@ -57,7 +57,7 @@ const Hero = () => {
               icon={['fab', 'medium']}
             />
             <IconButton
-              href="https://t.me/joinchat/3Nt5MNyVRUIyYzU5"
+              href="https://t.me/yogi_defi"
               icon={['fab', 'telegram']}
             />
           </HeroActionGroup>
