@@ -41,6 +41,7 @@ const Nav = () => {
         </NavBar>
         <NavActions>
           <TextButton href="https://docs.yogi.fi">{t('Nav-Docs')}</TextButton>
+          <TextButton href="https://snapshot.org/#/yogi-fi.eth">{t('Nav-Vote')}</TextButton>
           <TextButton href="https://farms.yogi.fi">{t('Nav-Farms')}</TextButton>
           <TextButton href="https://pools.yogi.fi">{t('Nav-Pools')}</TextButton>
           <PrimaryButton href="https://exchange.yogi.fi">
@@ -58,11 +59,14 @@ const Nav = () => {
           <NavDropdownLink href="https://pools.yogi.fi">
             {t('Nav-Pools')}
           </NavDropdownLink>
-          <NavDropdownLink href="https://docs.yogi.fi">
-            {t('Nav-Docs')}
-          </NavDropdownLink>
           <NavDropdownLink href="https://farms.yogi.fi">
             {t('Nav-Farms')}
+          </NavDropdownLink>
+          <NavDropdownLink href="https://snapshot.org/#/yogi-fi.eth">
+            {t('Nav-Vote')}
+          </NavDropdownLink>
+          <NavDropdownLink href="https://docs.yogi.fi">
+            {t('Nav-Docs')}
           </NavDropdownLink>
         </NavDropdownList>
       </NavDropdown>
